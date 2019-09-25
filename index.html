@@ -1,28 +1,380 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html ondragstart="return false;" ondrop="return false;">
 <head>
+  <title>MrXploder</title>
   <meta charset="UTF-8">
-  <title>CSS3 Text Animation Effect</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="sp-container">
-	<div class="sp-content">
-		<div class="sp-globe"></div>
-		<h2 class="frame-1">Pronto!</h2>
-		<h2 class="frame-2">Lanzamiento</h2>
-		<h2 class="frame-3">Web Profesional</h2>
-		<h2 class="frame-4">TEST IT!</h2>
-		<h2 class="frame-5">
-			<span>Piensa,</span>
-			<span>Crea,</span>
-			<span>Construye.</span>
-		</h2>	
-	</div>
-</div>
-<!-- partial -->
-</body>
-</html>
+  <div id="loading">
+    <div id="loading-center">
+      <div id="loading-center-absolute">
+        <div class="box-holder animated bounceInDown">
+          <span class="load-box"><span class="box-inner"></span></span>
+        </div>
+        <br>
+        <div class="text-holder text-center">
+          <h2>LUIS ARANCIBIA</h2>
+          <h6>Front-End Developer</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header id="home">
+    <div class="header-background section"></div>
+  </header>
+  <div id="v-card-holder" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <div id="v-card" class="card">
+            <div id="profile" class="right">
+              <img alt="profile-image" class="img-responsive" src="img/profile/profile.png">
+              <div class="slant"></div>
+            </div>
+            <div class="card-content">
+              <div class="info-headings">
+                <h4 class="text-uppercase left">Luis Arancibia</h4>
+                <h6 class="text-capitalize left">Front-End Developer</h6>
+              </div>
+              <div class="infos">
+                <ul class="profile-list">
+                  <li class="clearfix">
+                    <span class="title"><i class="material-icons">email</i></span>
+                    <span class="content">l.arancibiaf@gmail.com</span>
+                  </li>
+                  <li class="clearfix">
+                    <span class="title"><i class="material-icons">phone</i></span>
+                    <span class="content">+56 9 571 398 08</span>
+                  </li>
+                  <li class="clearfix">
+                    <span class="title"><i class="material-icons">place</i></span>
+                    <span class="content">Santiago, Chile</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="links">
+                <a href="https://www.facebook.com/MrXploder" id="first_one" class="social btn-floating indigo"><i class="fa fa-facebook"></i></a>
+                <a href="https://github.com/MrXploder" class="social  btn-floating grey darken-3"><i class="fa fa-github"></i></a>
+                <a href="https://www.youtube.com/user/MsXploder" class="social  btn-floating red"><i class="fa fa-youtube-play"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="about" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="about-card" class="card">
+            <div class="card-content">
+              <p>
+                Hola!, Soy Luis Arancibia y soy un Ingeniero Electronico amante del desarrollo web front-end con 3 años de recorrido.
+                Estoy familiarizado con todas las etapas del proceso productivo sin embargo, mi enfoque es hacia el Front-End.
+                Mis herramientas favoritas son AngularJS 1.7 y Bootstrap 3.7, aunque lamentablemente la empleabilidad es baja por lo que,
+                estoy estudiando Vuejs 2 como alternativa a AngularJS.
+              </p>
+            </div>
+            <div id="about-btn" class="card-action">
+              <div class="about-btn">
+                <a href="cv.pdf" class="btn waves-effect">Download CV</a>
+                <a href="mailto: l.arancibiaf@gmail.com" class="btn waves-effect">Contact Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h4 class="text-uppercase text-center"><img src="img/icons/book.png" alt="demo">Estudios</h4>
+      </div>
+      <div id="timeline-education">
+        <div class="timeline-block">
+          <div class="timeline-dot"><h6>I</h6></div>
+          <div class="card timeline-content">
+            <div class="card-content">
+              <h6 class="timeline-title">Estudios Superiores</h6>
+              <div class="timeline-info">
+                <h6>
+                  <small>DUOC UC</small>
+                </h6>
+                <h6>
+                  <small>Jan 2010 - Dec 2016</small>
+                </h6>
+              </div>
+              <p>
+               Titulado de Ingeniero Electrico Y Electronico.
+               Certificado TOEIC Ingles Intermedio
+               Certificado Siemens PLC S7-300
+               Certificado SEC clase A
+             </p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+ <section id="skills" class="section">
+  <div class="container">
+    <div class="section-title">
+      <h4 class="text-uppercase text-center"><img src="img/icons/mixer.png" alt="demo">Habilidades</h4>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div id="skills-card" class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="skills-title">
+                  <h6 class="text-center">Herramientas<br>(Nivel de Independencia)</h6>
+                </div>
+                <div class="skillbar" data-percent="90%">
+                  <div class="skillbar-title"><span>Bootstrap 3.7</span></div>
+                  <div class="skillbar-bar"></div>
+                  <div class="skill-bar-percent">90%</div>
+                </div>
+                <div class="skillbar" data-percent="90%">
+                  <div class="skillbar-title"><span>AngularJS 1.7</span></div>
+                  <div class="skillbar-bar"></div>
+                  <div class="skill-bar-percent">90%</div>
+                </div>
+                <div class="skillbar" data-percent="10%">
+                  <div class="skillbar-title"><span>VueJS 2</span></div>
+                  <div class="skillbar-bar"></div>
+                  <div class="skill-bar-percent">10%</div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="skills-title">
+                  <h6 class="text-center">Habilidades Blandas</h6>
+                </div>
+                <div class="skillbar" data-percent="80%">
+                  <div class="skillbar-title"><span>Comunicación</span></div>
+                  <div class="skillbar-bar"></div>
+                  <div class="skill-bar-percent">80%</div>
+                </div>
+                <div class="skillbar" data-percent="60%">
+                  <div class="skillbar-title"><span>Trabajo en Equipo</span></div>
+                  <div class="skillbar-bar"></div>
+                  <div class="skill-bar-percent">60%</div>
+                </div>
+                <div class="skillbar" data-percent="70%">
+                  <div class="skillbar-title"><span>Creatividad</span></div>
+                  <div class="skillbar-bar"></div>
+                  <div class="skill-bar-percent">70%</div>
+                </div>
+                <div class="skillbar" data-percent="70%">
+                  <div class="skillbar-title"><span>Dedicación</span></div>
+                  <div class="skillbar-bar"></div>
+                  <div class="skill-bar-percent">70%</div>
+                </div>
+                <div class="skillbar" data-percent="90%">
+                  <div class="skillbar-title"><span>Responsabilidad</span></div>
+                  <div class="skillbar-bar"></div>
+                  <div class="skill-bar-percent">90%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h4 class="text-uppercase text-center"><img src="img/icons/layers.png" alt="demo">Experiencia Formal</h4>
+      </div>
+      <div id="timeline-experience">
+        <div class="timeline-block">
+          <div class="timeline-dot"><h6>3</h6></div>
+          <div class="card timeline-content">
+            <div class="card-content">
+              <h6 class="timeline-title">Desarrollador Web Freelance</h6>
+              <div class="timeline-info">
+                <h6>
+                  <small>Home</small>
+                </h6>
+                <h6>
+                  <small>Mayo 2018 - A la fecha...</small>
+                </h6>
+              </div>
+              <p>Actualmente me encuentro en casa desarrollando de manera independiente para mis clientes actuales y ex-jefes aunque tambien me encuentro en busqueda de empleo formal</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-block">
+          <div class="timeline-dot"><h6> </h6></div>
+          <div class="card timeline-content">
+            <div class="card-content">
+              <h6 class="timeline-title">Desarrollador AngularJS</h6>
+              <div class="timeline-info">
+                <h6><small>Puntero S.A</small></h6>
+                <h6><small>Apr 2018</small></h6>
+              </div>
+              <p>Trabajé Presencial en Puntero SpA. por proyecto mejorando la interfaz grafica y logica de negocio de su aplicación 'Elder'</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-block">
+          <div class="timeline-dot"><h6>2</h6></div>
+          <div class="card timeline-content">
+            <div class="card-content">
+              <h6 class="timeline-title">Soporte Tecnico y Desarrollador Web</h6>
+              <div class="timeline-info">
+                <h6>
+                  <small>Siscom Ingenieria E.I.R.L</small>
+                </h6>
+                <h6>
+                  <small>Abril 2017 - Abril 2018</small>
+                </h6>
+              </div>
+              <p>
+                Apenas terminé mi practica profesional entré a trabajar a Siscom como soporte informatico, luego de eso se me asignó crear la interfaz web de la aplicacion de la empresa y crear una nueva aplicacion para tickets de soporte.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-block">
+          <div class="timeline-dot"><h6> </h6></div>
+          <div class="card timeline-content">
+            <div class="card-content">
+              <h6 class="timeline-title">Desarrollador Trainee</h6>
+              <div class="timeline-info">
+                <h6>
+                  <small>Innervycs S.A.</small>
+                </h6>
+                <h6>
+                  <small>Enero 2017 - Marzo 2017</small>
+                </h6>
+              </div>
+              <p>Practica Profesional realizada en la empresa Innervycs de investigacion y desarrollo. Ahi realicé junto con mis colegas, la implementacion de un software de gestion de RR.HH.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-block">
+          <div class="timeline-dot"><h6>1</h6></div>
+          <div class="card timeline-content">
+            <div class="card-content">
+              <h6 class="timeline-title">Desarrollador Web Freelance Trainee</h6>
+              <div class="timeline-info">
+                <h6>
+                  <small>Home</small>
+                </h6>
+                <h6>
+                  <small>Septiembre 2015</small>
+                </h6>
+              </div>
+              <p>Mientras estudiaba la arquitectura y programación de Microcontralores, decidí aprender a desarrollar en plataformas web para darle una mejor interfaz grafica a mis proyectos. Empecé con jQuery y luego con AngularJS.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="portfolios" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h4 class="text-uppercase text-center"><img src="img/icons/safe.png" alt="demo">Portfolios</h4>
+      </div>
+      <div id="portfolios-card" class="row">
+        <ul class="nav nav-tabs">
+          <li class="active waves-effect list-shuffle"><a id="all-sample" href="#all" data-toggle="tab">ALL</a>
+            <li class="waves-effect list-shuffle"><a class="cate active" href="#a" data-toggle="tab">WebMonitor</a></li>
+            <li class="waves-effect list-shuffle"><a class="cate" href="#b" data-toggle="tab">meddApp</a></li>
+            <li class="waves-effect list-shuffle"><a class="cate" href="#c" data-toggle="tab">appMixtura</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="all"></div>
+            <div id="a">
+              <div class="col-md-4 col-sm-12 col-xs-12 grid big inLeft">
+                <figure class="port-effect-scale">
+                  <img src="img/portfolios/webmonitor2.png" class="img-responsive" alt="portfolio-demo"/>
+                  <figcaption>
+                    <a href="img/portfolios/webmonitor2.png" class="popup-image" data-effect="mfp-3d-unfold">View more</a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12 grid inRight">
+                <figure class="port-effect-up">
+                  <img src="img/portfolios/webmonitor1.png" class="img-responsive" alt="portfolio-demo"/>
+                  <figcaption>
+                    <a href="img/portfolios/webmonitor1.png" class="popup-image" data-effect="mfp-move-horizontal">View more</a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div id="b">
+              <div class="col-md-4 col-sm-12 col-xs-12 grid big inRight">
+                <figure class="port-effect-up">
+                  <img src="img/portfolios/meddapp20.png" class="img-responsive" alt="portfolio-demo"/>
+                  <figcaption>
+                    <a href="img/portfolios/meddapp20.png" class="popup-image" data-effect="mfp-move-from-top">View more</a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12 grid inLeft">
+                <figure class="port-effect-up">
+                  <img src="img/portfolios/meddapp10.png" class="img-responsive" alt="portfolio-demo"/>
+                  <figcaption>
+                    <a href="img/portfolios/meddapp10.png" class="popup-image" data-effect="mfp-with-fade">View more</a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+            <div id="c">
+              <div class="col-md-4 col-sm-12 col-xs-12 grid big inRight">
+                <figure class="port-effect-up">
+                  <img src="img/portfolios/appmixtura1.png" class="img-responsive" alt="portfolio-demo"/>
+                  <figcaption>
+                    <a href="img/portfolios/appmixtura1.png" class="popup-image" data-effect="mfp-move-from-top">View more</a>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12 grid inLeft">
+                <figure class="port-effect-up">
+                  <img src="img/portfolios/appmixtura2.png" class="img-responsive" alt="portfolio-demo"/>
+                  <figcaption>
+                    <a href="img/portfolios/appmixtura2.png" class="popup-image" data-effect="mfp-with-fade">View more</a>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <button id="add-more" class="center-block btn-large waves-effect"><i id="port-add-icon" class="fa fa-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="scroll-top">
+      <div id="scrollup"><i class="fa fa-angle-up"></i></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js" integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/scrollreveal@3.4.0/dist/scrollreveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+  </html>
