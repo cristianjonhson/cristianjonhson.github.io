@@ -954,6 +954,26 @@ body.scale-effect .btn-holder .btn-play {
   background: #05985a;
 }
 
+#about .about-btn .cta-primary {
+  background: #06A763;
+  color: #282828;
+  font-weight: 700;
+}
+
+#about .about-btn .cta-primary:hover {
+  background: #04b26a;
+}
+
+#about .about-btn .cta-secondary {
+  background: transparent;
+  color: #06A763;
+  border: 1px solid #06A763;
+}
+
+#about .about-btn .cta-secondary:hover {
+  background: rgba(6, 167, 99, 0.12);
+}
+
 #timeline-education {
   position: relative;
 }

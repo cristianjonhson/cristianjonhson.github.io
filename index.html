@@ -44,9 +44,9 @@
     "name": "Cristian Jonhson",
     "url": "https://cristianjonhson.github.io",
     "image": "https://cristianjonhson.github.io/img/profile/profile.png",
-    "description": "Ingeniero de software semi senior con 6+ años de experiencia en arquitectura empresarial, Java/Spring Boot, .NET, AWS, Docker y microservicios.",
+    "description": "Ingeniero software semi senior con 6+ años de experiencia en arquitectura empresarial, Java/Spring Boot, .NET, AWS, Docker y microservicios.",
     "inLanguage": "es-CL",
-    "jobTitle": "Ingeniero de Software Semi Senior",
+    "jobTitle": "Ingeniero Software Semi Senior",
     "email": "cristian.jonhson@gmail.com",
     "telephone": "+56 9 895 872 46",
     "address": {
@@ -98,8 +98,8 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="banner-content banner-content-fullwidth">
-                  <h1 class="header-title-text type-animate">
-                  </h1>
+                  <h1 class="header-title-text type-animate">Ingeniero Semi Senior Java/Spring y .NET para sistemas
+                    enterprise</h1>
                   <ul class="list-inline list-social">
                     <li>
                       <a href="mailto:cristian.jonhson@gmail.com" class="social-icon social-icon-facebook">
@@ -131,7 +131,7 @@
 
       <div class="text-holder text-center">
         <h2>Cristian Jonhson</h2>
-        <h6>Ingeniero informático</h6>
+        <h6>Ingeniero Software Semi Senior</h6>
       </div>
     </div>
   </div>
@@ -150,7 +150,7 @@
             <div class="card-content">
               <div class="info-headings">
                 <h4 class="text-uppercase left">Cristian Jonhson</h4>
-                <h6 class="text-capitalize left">Ingeniero Informático</h6>
+                <h6 class="text-capitalize left">Ingeniero Software Semi Senior</h6>
               </div>
               <div class="infos">
                 <ul class="profile-list">
@@ -190,7 +190,7 @@
           <div id="about-card" class="card">
             <div class="card-content">
               <p>
-                Ingeniero Informático con +6 años en sistemas Enterprise (finanzas/banca), construyendo y
+                Ingeniero Software Semi Senior con +6 años en sistemas Enterprise (finanzas/banca), construyendo y
                 modernizando soluciones en Java/Spring y .NET. Fuerte en arquitectura (DDD/Clean), microservicios,
                 integraciones REST/SOAP, PostgreSQL/Oracle y operación en AWS + Docker/Kubernetes (EKS) con CI/CD.
                 Experiencia en migraciones (RKE a EKS, .NET 6 a 8) y optimización de procesos/ETL con foco en
@@ -199,8 +199,10 @@
             </div>
             <div id="about-btn" class="card-action">
               <div class="about-btn">
-                <a href="ES - Cristian Jonhson Alvarez v2026.pdf" class="btn waves-effect">Download CV</a>
-                <a href="mailto: cristian.jonhson@gmail.com" class="btn waves-effect">Contact Me</a>
+                <a id="cta-primary" href="mailto:cristian.jonhson@gmail.com"
+                  class="btn waves-effect cta-primary">Contactar</a>
+                <a id="cta-secondary" href="ES - Cristian Jonhson Alvarez v2026.pdf"
+                  class="btn waves-effect cta-secondary">Descargar CV</a>
               </div>
             </div>
           </div>
@@ -808,6 +810,56 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/scrollreveal@3.4.0/dist/scrollreveal.min.js"></script>
+  <script>
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+
+      function trackEvent(eventName, params) {
+        var payload = Object.assign({ event: eventName }, params || {});
+        window.dataLayer.push(payload);
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', eventName, params || {});
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var ctaPrimary = document.getElementById('cta-primary');
+        if (ctaPrimary) {
+          ctaPrimary.addEventListener('click', function () {
+            trackEvent('cta_primary_click', { cta: 'contactar', location: 'about' });
+          });
+        }
+
+        var mailLinks = document.querySelectorAll('a[href^="mailto:"]');
+        mailLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            trackEvent('mailto_click', { href: link.getAttribute('href') });
+          });
+        });
+
+        var sent50 = false;
+        var sent90 = false;
+        window.addEventListener('scroll', function () {
+          var scrollTop = window.scrollY || document.documentElement.scrollTop;
+          var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          if (docHeight <= 0) {
+            return;
+          }
+          var progress = (scrollTop / docHeight) * 100;
+
+          if (!sent50 && progress >= 50) {
+            sent50 = true;
+            trackEvent('scroll_depth', { percent: 50 });
+          }
+
+          if (!sent90 && progress >= 90) {
+            sent90 = true;
+            trackEvent('scroll_depth', { percent: 90 });
+          }
+        }, { passive: true });
+      });
+    })();
+  </script>
   <script src="js/custom.js"></script>
 </body>
 
