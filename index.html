@@ -814,91 +814,15 @@
     (function () {
       window.dataLayer = window.dataLayer || [];
 
-      var experimentId = 'experiment_hero_cta_v1';
-      var variants = {
-        control: {
-          headline: 'Ingeniero Senior Java/Spring y .NET para sistemas enterprise',
-          support: '+6 años modernizando plataformas enterprise en banca y finanzas con arquitectura mantenible, AWS y microservicios.',
-          primaryCta: 'Contactar'
-        },
-        resultado: {
-          headline: 'Ayudo a modernizar sistemas enterprise en banca y finanzas con Java/Spring y .NET',
-          support: 'Arquitectura, AWS, microservicios y modernización de plataformas críticas con foco en estabilidad, seguridad y performance.',
-          primaryCta: 'Hablemos de tu proyecto'
-        }
-      };
-      var storageKey = experimentId + '_variant';
-      var currentVariant = 'control';
-
-      function getVariantFromQuery() {
-        var params = new URLSearchParams(window.location.search);
-        var forcedVariant = params.get('ab');
-        return variants[forcedVariant] ? forcedVariant : null;
-      }
-
-      function pickVariant() {
-        var forcedVariant = getVariantFromQuery();
-        if (forcedVariant) {
-          try {
-            window.localStorage.setItem(storageKey, forcedVariant);
-          } catch (error) {
-          }
-          return forcedVariant;
-        }
-
-        try {
-          var storedVariant = window.localStorage.getItem(storageKey);
-          if (variants[storedVariant]) {
-            return storedVariant;
-          }
-        } catch (error) {
-        }
-
-        var assignedVariant = Math.random() < 0.5 ? 'control' : 'resultado';
-        try {
-          window.localStorage.setItem(storageKey, assignedVariant);
-        } catch (error) {
-        }
-        return assignedVariant;
-      }
-
-      function applyVariant(variantName) {
-        var variant = variants[variantName] || variants.control;
-        var heroHeadline = document.getElementById('hero-headline');
-        var heroSupport = document.getElementById('hero-support');
-        var ctaPrimary = document.getElementById('cta-primary');
-
-        if (heroHeadline) {
-          heroHeadline.textContent = variant.headline;
-        }
-        if (heroSupport) {
-          heroSupport.textContent = variant.support;
-        }
-        if (ctaPrimary) {
-          ctaPrimary.textContent = variant.primaryCta;
-        }
-      }
-
       function trackEvent(eventName, params) {
-        var payload = Object.assign({
-          event: eventName,
-          experiment_id: experimentId,
-          variant: currentVariant
-        }, params || {});
+        var payload = Object.assign({ event: eventName }, params || {});
         window.dataLayer.push(payload);
         if (typeof window.gtag === 'function') {
-          window.gtag('event', eventName, Object.assign({
-            experiment_id: experimentId,
-            variant: currentVariant
-          }, params || {}));
+          window.gtag('event', eventName, params || {});
         }
       }
 
       document.addEventListener('DOMContentLoaded', function () {
-        currentVariant = pickVariant();
-        applyVariant(currentVariant);
-        trackEvent('experiment_view', { non_interaction: true });
-
         var ctaPrimary = document.getElementById('cta-primary');
         if (ctaPrimary) {
           ctaPrimary.addEventListener('click', function () {
