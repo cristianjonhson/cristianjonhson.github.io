@@ -42,6 +42,7 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
@@ -751,8 +752,6 @@ body.scale-effect .btn-holder .btn-play {
   margin-top: 99px;
 }
 
-#v-card-holder #v-card .infos .profile-list {}
-
 #v-card-holder #v-card .infos .profile-list .title {
   display: block;
   float: left;
@@ -1139,8 +1138,6 @@ body.scale-effect .btn-holder .btn-play {
   font-weight: normal;
 }
 
-.timeline-block .timeline-content .timeline-info {}
-
 .timeline-block .timeline-content .timeline-info h6 {
   line-height: 12px;
 }
@@ -1224,7 +1221,9 @@ body.scale-effect .btn-holder .btn-play {
     top: 0;
     z-index: 2;
     margin-left: -24px;
+    transform: translateZ(0);
     -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
   }
 
@@ -1707,8 +1706,6 @@ body.scale-effect .btn-holder .btn-play {
   }
 }
 
-#contact .card .card-content {}
-
 #contact .card .card-content .input-field {
   position: relative;
   margin-top: 1rem;
@@ -1768,8 +1765,6 @@ body.scale-effect .btn-holder .btn-play {
 }
 
 @-moz-document url-prefix() {
-  #contact {}
-
   #contact #myMap {
     height: 412px;
   }
@@ -1989,8 +1984,6 @@ footer {
 .single-page .disqus-comment {
   padding: 20px;
 }
-
-.single-page .widget-holder {}
 
 .single-page .widget-holder h4 {
   background: #06A763;
