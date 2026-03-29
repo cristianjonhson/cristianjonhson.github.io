@@ -4,7 +4,7 @@ body {
   padding: 0;
   outline: 0;
   display: block;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 15px;
   background-color: #262525;
   color: #7b7b7b;
@@ -107,6 +107,15 @@ a:hover {
 a:focus {
   color: #046c40;
   text-decoration: none;
+}
+
+a:focus-visible,
+.btn:focus-visible,
+.social-icon:focus-visible,
+#v-card-holder #v-card .links .social:focus-visible {
+  outline: 2px solid #06A763;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(6, 167, 99, 0.25);
 }
 
 h1 {
@@ -1024,6 +1033,7 @@ body.scale-effect .btn-holder .btn-play {
   color: #282828;
   width: 180px;
   border-radius: 2px;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 #about .about-btn .btn:hover {
@@ -1036,7 +1046,8 @@ body.scale-effect .btn-holder .btn-play {
   font-weight: 700;
 }
 
-#about .about-btn .cta-primary:hover {
+#about .about-btn .cta-primary:hover,
+#about .about-btn .cta-primary:focus-visible {
   background: #04b26a;
 }
 
@@ -1046,8 +1057,22 @@ body.scale-effect .btn-holder .btn-play {
   border: 1px solid #06A763;
 }
 
-#about .about-btn .cta-secondary:hover {
+#about .about-btn .cta-secondary:hover,
+#about .about-btn .cta-secondary:focus-visible {
   background: rgba(6, 167, 99, 0.12);
+}
+
+#loading .list-social .social-icon,
+#v-card-holder #v-card .links .social {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#loading .list-social .social-icon:hover,
+#loading .list-social .social-icon:focus-visible,
+#v-card-holder #v-card .links .social:hover,
+#v-card-holder #v-card .links .social:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
 }
 
 #timeline-education {
@@ -1303,7 +1328,7 @@ body.scale-effect .btn-holder .btn-play {
   }
 
   .timeline-block {
-    margin: -5em 0;
+    margin: 0 0 24px;
   }
 
   .timeline-block .card {
