@@ -408,10 +408,25 @@ body.scale-effect .btn-holder .btn-play {
 }
 
 #loading .text-holder .loading-title-row {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
+  flex-wrap: nowrap;
+  width: auto;
+  max-width: 100%;
+}
+
+#loading .text-holder .loading-title-row #hero-headline {
+  margin: 0;
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+  line-height: 1.2;
+  font-size: 36px;
+  font-weight: 800;
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
 
 #loading .text-holder h2 {
@@ -457,6 +472,14 @@ body.scale-effect .btn-holder .btn-play {
   #loading .text-holder {
     margin-top: 14px;
     padding: 0 12px;
+  }
+
+  #loading .text-holder .loading-title-row {
+    gap: 10px;
+  }
+
+  #loading .text-holder .loading-title-row #hero-headline {
+    font-size: 28px;
   }
 
   #loading .banner-content .header-title-text {
