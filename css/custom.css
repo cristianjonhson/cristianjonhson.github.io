@@ -383,28 +383,34 @@ body.scale-effect .btn-holder .btn-play {
   width: 100%;
   height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 12px;
+  box-sizing: border-box;
 }
 
 #loading #loading-center-absolute {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 200px;
-  width: 271px;
-  margin-top: -123px;
-  margin-left: -136px;
+  position: static;
+  height: auto;
+  width: min(760px, 100%);
+  margin: 0;
 }
 
 #loading .text-holder {
-  width: 100%;
-  position: absolute;
+  width: min(760px, 100%);
+  position: static;
   color: #282828;
-  top: 62%;
+  margin-top: 18px;
+  text-align: center;
 }
 
 #loading .text-holder h2 {
   padding: 0;
   margin: 0;
+  text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
 
@@ -412,6 +418,7 @@ body.scale-effect .btn-holder .btn-play {
   font-size: 16px;
   padding: 0;
   margin: 0;
+  text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
 
@@ -440,6 +447,11 @@ body.scale-effect .btn-holder .btn-play {
 }
 
 @media screen and (max-width:767px) {
+  #loading .text-holder {
+    margin-top: 14px;
+    padding: 0 12px;
+  }
+
   #loading .banner-content .header-title-text {
     font-size: 24px;
   }
@@ -451,9 +463,8 @@ body.scale-effect .btn-holder .btn-play {
 }
 
 #loading .box-holder {
-  position: absolute;
-  top: 42%;
-  left: 45%;
+  position: static;
+  margin: 0 auto 12px;
 }
 
 #loading .box-holder .load-box {
