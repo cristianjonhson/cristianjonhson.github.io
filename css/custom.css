@@ -1003,36 +1003,37 @@ body.scale-effect .btn-holder .btn-play {
 }
 
 #timeline-certifications .timeline-block {
-  margin: 0 0 20px;
+  margin: 0 0 20px !important;
+  clear: both;
 }
 
 #timeline-certifications .timeline-block .timeline-dot {
-  left: 0;
-  right: auto;
+  left: 0 !important;
+  right: auto !important;
   top: 5px;
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 
 #timeline-certifications .timeline-block .timeline-content {
-  width: calc(100% - 80px);
-  margin-left: 80px;
-  float: none;
+  width: calc(100% - 80px) !important;
+  margin-left: 80px !important;
+  float: none !important;
 }
 
 #timeline-certifications .timeline-block .timeline-content::before {
   top: 26px;
-  left: -58px;
-  right: auto;
+  left: -58px !important;
+  right: auto !important;
 }
 
 #timeline-certifications .timeline-block:nth-child(even) .timeline-content {
-  float: none;
+  float: none !important;
 }
 
 #timeline-certifications .timeline-block:nth-child(even) .timeline-content::before {
   top: 26px;
-  left: -58px;
-  right: auto;
+  left: -58px !important;
+  right: auto !important;
 }
 
 .timeline-block {
@@ -1175,30 +1176,31 @@ body.scale-effect .btn-holder .btn-play {
   }
 
   #timeline-certifications .timeline-block {
-    margin: 0 0 20px;
+    margin: 0 0 20px !important;
+    clear: both;
   }
 
   #timeline-certifications .timeline-block .timeline-dot {
-    left: 0;
-    right: auto;
+    left: 0 !important;
+    right: auto !important;
     top: 5px;
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 
   #timeline-certifications .timeline-block .timeline-content {
-    width: calc(100% - 80px);
-    margin-left: 80px;
-    float: none;
+    width: calc(100% - 80px) !important;
+    margin-left: 80px !important;
+    float: none !important;
   }
 
   #timeline-certifications .timeline-block:nth-child(even) .timeline-content {
-    float: none;
+    float: none !important;
   }
 
   #timeline-certifications .timeline-block:nth-child(even) .timeline-content::before {
     top: 26px;
-    left: -58px;
-    right: auto;
+    left: -58px !important;
+    right: auto !important;
   }
 
   .timeline-block {
