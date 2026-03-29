@@ -1381,6 +1381,10 @@ body.scale-effect .btn-holder .btn-play {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
 
+#skills .card ul li {
+  color: #1f2b22;
+}
+
 #skills .card .skillbar {
   position: relative;
   display: block;
