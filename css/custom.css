@@ -989,13 +989,14 @@ body.scale-effect .btn-holder .btn-play {
 
 #timeline-certifications {
   position: relative;
+  padding-bottom: 18px;
 }
 
 #timeline-certifications::before {
   content: '';
   position: absolute;
   top: 0;
-  bottom: 23px;
+  bottom: 40px;
   left: 23px;
   width: 4px;
   opacity: 0.3;
@@ -1034,6 +1035,10 @@ body.scale-effect .btn-holder .btn-play {
   top: 26px;
   left: -58px !important;
   right: auto !important;
+}
+
+#timeline-certifications .timeline-block:last-child {
+  margin-bottom: 8px !important;
 }
 
 .timeline-block {
@@ -1173,6 +1178,7 @@ body.scale-effect .btn-holder .btn-play {
     height: 100%;
     opacity: 0.4;
     background: #06A763;
+    bottom: 40px;
   }
 
   #timeline-certifications .timeline-block {
