@@ -1318,18 +1318,6 @@ body.scale-effect .btn-holder .btn-play {
   background: #06A763;
 }
 
-#testimonials #testimonials-card .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  border-radius: 0;
-  border: 2px solid #262525;
-}
-
-#testimonials #testimonials-card .swiper-pagination .swiper-pagination-bullet-active {
-  background: #262525;
-  opacity: 1;
-}
-
 #testimonials #testimonials-card .client-img {
   margin-bottom: -45px;
   margin-top: 10px;
@@ -1861,24 +1849,6 @@ footer {
 
 .single-page .post .post-image img {
   max-width: 100%;
-}
-
-.single-page .post .post-image .swiper-container {
-  background: black;
-}
-
-.single-page .post .post-image .swiper-container .swiper-pagination {}
-
-.single-page .post .post-image .swiper-container .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  border-radius: 0;
-  border: 2px solid #262525;
-}
-
-.single-page .post .post-image .swiper-container .swiper-pagination .swiper-pagination-bullet-active {
-  background: #262525;
-  opacity: 1;
 }
 
 .single-page .post header {
