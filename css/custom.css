@@ -435,14 +435,14 @@ body.scale-effect .btn-holder .btn-play {
   font-size: 36px;
   font-weight: 800;
   white-space: nowrap;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 #loading .text-holder h2 {
   padding: 0;
   margin: 0;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 #loading .text-holder h6 {
@@ -450,7 +450,7 @@ body.scale-effect .btn-holder .btn-play {
   padding: 0;
   margin: 0;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 #loading .banner-content {
@@ -465,7 +465,7 @@ body.scale-effect .btn-holder .btn-play {
   font-size: 30px;
   line-height: 1.2;
   font-weight: 800;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 #loading .banner-content .hero-support {
@@ -794,7 +794,7 @@ body.scale-effect .btn-holder .btn-play {
   overflow: visible;
   width: 100%;
   height: auto;
-  margin-top: -194px;
+  margin-top: -156px;
 }
 
 #v-card-holder #v-card {
@@ -806,7 +806,7 @@ body.scale-effect .btn-holder .btn-play {
   transition: height 1s, color 1s, margin 1s;
   z-index: 1;
   background: #262525;
-  margin: -33px 3px 0 0;
+  margin: -18px 3px 0 0;
 }
 
 #v-card-holder #v-card .info-headings {
@@ -818,7 +818,7 @@ body.scale-effect .btn-holder .btn-play {
   width: 100%;
   font-weight: 900;
   color: #a8a8a8;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 #v-card-holder #v-card .info-headings h6 {
@@ -829,7 +829,7 @@ body.scale-effect .btn-holder .btn-play {
   margin-bottom: 30px;
   font-size: 1.2em;
   color: #a8a8a8;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 #v-card-holder #v-card .infos {
