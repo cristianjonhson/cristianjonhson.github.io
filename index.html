@@ -98,8 +98,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="banner-content banner-content-fullwidth">
-                  <h1 class="header-title-text type-animate">Ingeniero Semi Senior Java/Spring y .NET para sistemas
-                    enterprise</h1>
+                  <h1 id="hero-headline" class="header-title-text type-animate">Ingeniero Semi Senior </h1>
                   <ul class="list-inline list-social">
                     <li>
                       <a href="mailto:cristian.jonhson@gmail.com" class="social-icon social-icon-facebook">
@@ -131,7 +130,7 @@
 
       <div class="text-holder text-center">
         <h2>Cristian Jonhson</h2>
-        <h6>Ingeniero Software Semi Senior</h6>
+        <h6 id="hero-role">Ingeniero de Software Semi Senior</h6>
       </div>
     </div>
   </div>
@@ -150,7 +149,8 @@
             <div class="card-content">
               <div class="info-headings">
                 <h4 class="text-uppercase left">Cristian Jonhson</h4>
-                <h6 class="text-capitalize left">Ingeniero Software Semi Senior</h6>
+                <h6 id="profile-role" class="text-capitalize left">Ingeniero Semi Senior Java/Spring y .NET
+                  para sistemas enterprise</h6>
               </div>
               <div class="infos">
                 <ul class="profile-list">
@@ -189,8 +189,8 @@
         <div class="col-md-12">
           <div id="about-card" class="card">
             <div class="card-content">
-              <p>
-                Ingeniero Software Semi Senior con +6 años en sistemas Enterprise (finanzas/banca), construyendo y
+              <p id="about-summary">
+                Ingeniero de Software Semi Senior con +6 años en sistemas Enterprise (finanzas/banca), construyendo y
                 modernizando soluciones en Java/Spring y .NET. Fuerte en arquitectura (DDD/Clean), microservicios,
                 integraciones REST/SOAP, PostgreSQL/Oracle y operación en AWS + Docker/Kubernetes (EKS) con CI/CD.
                 Experiencia en migraciones (RKE a EKS, .NET 6 a 8) y optimización de procesos/ETL con foco en
@@ -814,19 +814,102 @@
     (function () {
       window.dataLayer = window.dataLayer || [];
 
+      var experimentId = 'experiment_hero_cta_v1';
+      var variants = {
+        control: {
+          headline: 'Ingeniero Senior Java/Spring y .NET para sistemas enterprise',
+          support: '+6 años modernizando plataformas enterprise en banca y finanzas con arquitectura mantenible, AWS y microservicios.',
+          primaryCta: 'Contactar'
+        },
+        resultado: {
+          headline: 'Ayudo a modernizar sistemas enterprise en banca y finanzas con Java/Spring y .NET',
+          support: 'Arquitectura, AWS, microservicios y modernización de plataformas críticas con foco en estabilidad, seguridad y performance.',
+          primaryCta: 'Hablemos de tu proyecto'
+        }
+      };
+      var storageKey = experimentId + '_variant';
+      var currentVariant = 'control';
+
+      function getVariantFromQuery() {
+        var params = new URLSearchParams(window.location.search);
+        var forcedVariant = params.get('ab');
+        return variants[forcedVariant] ? forcedVariant : null;
+      }
+
+      function pickVariant() {
+        var forcedVariant = getVariantFromQuery();
+        if (forcedVariant) {
+          try {
+            window.localStorage.setItem(storageKey, forcedVariant);
+          } catch (error) {
+          }
+          return forcedVariant;
+        }
+
+        try {
+          var storedVariant = window.localStorage.getItem(storageKey);
+          if (variants[storedVariant]) {
+            return storedVariant;
+          }
+        } catch (error) {
+        }
+
+        var assignedVariant = Math.random() < 0.5 ? 'control' : 'resultado';
+        try {
+          window.localStorage.setItem(storageKey, assignedVariant);
+        } catch (error) {
+        }
+        return assignedVariant;
+      }
+
+      function applyVariant(variantName) {
+        var variant = variants[variantName] || variants.control;
+        var heroHeadline = document.getElementById('hero-headline');
+        var heroSupport = document.getElementById('hero-support');
+        var ctaPrimary = document.getElementById('cta-primary');
+
+        if (heroHeadline) {
+          heroHeadline.textContent = variant.headline;
+        }
+        if (heroSupport) {
+          heroSupport.textContent = variant.support;
+        }
+        if (ctaPrimary) {
+          ctaPrimary.textContent = variant.primaryCta;
+        }
+      }
+
       function trackEvent(eventName, params) {
-        var payload = Object.assign({ event: eventName }, params || {});
+        var payload = Object.assign({
+          event: eventName,
+          experiment_id: experimentId,
+          variant: currentVariant
+        }, params || {});
         window.dataLayer.push(payload);
         if (typeof window.gtag === 'function') {
-          window.gtag('event', eventName, params || {});
+          window.gtag('event', eventName, Object.assign({
+            experiment_id: experimentId,
+            variant: currentVariant
+          }, params || {}));
         }
       }
 
       document.addEventListener('DOMContentLoaded', function () {
+        currentVariant = pickVariant();
+        applyVariant(currentVariant);
+        trackEvent('experiment_view', { non_interaction: true });
+
         var ctaPrimary = document.getElementById('cta-primary');
         if (ctaPrimary) {
           ctaPrimary.addEventListener('click', function () {
-            trackEvent('cta_primary_click', { cta: 'contactar', location: 'about' });
+            trackEvent('cta_primary_click', { cta: ctaPrimary.textContent.trim(), location: 'about' });
+          });
+        }
+
+        var ctaSecondary = document.getElementById('cta-secondary');
+        if (ctaSecondary) {
+          ctaSecondary.addEventListener('click', function () {
+            trackEvent('cta_secondary_click', { cta: ctaSecondary.textContent.trim(), location: 'about' });
           });
         }
 

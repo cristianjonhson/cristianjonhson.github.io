@@ -415,6 +415,41 @@ body.scale-effect .btn-holder .btn-play {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
 
+#loading .banner-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  color: #282828;
+}
+
+#loading .banner-content .header-title-text {
+  margin: 0 0 12px;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+}
+
+#loading .banner-content .hero-support {
+  margin: 0 auto 18px;
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #282828;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+@media screen and (max-width:767px) {
+  #loading .banner-content .header-title-text {
+    font-size: 24px;
+  }
+
+  #loading .banner-content .hero-support {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+}
+
 #loading .box-holder {
   position: absolute;
   top: 42%;
