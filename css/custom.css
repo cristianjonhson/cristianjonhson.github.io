@@ -7,7 +7,7 @@ body {
   font-family: 'Muli', sans-serif;
   font-size: 15px;
   background-color: #262525;
-  color: #7b7b7b;
+  color: #a8a8a8;
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-text-stroke: 1px transparent;
   -webkit-text-size-adjust: 100%;
@@ -92,7 +92,7 @@ div {
 }
 
 p {
-  color: #757575;
+  color: #a0a0a0;
 }
 
 a {
@@ -199,7 +199,7 @@ video {
 .modal .modal-content {
   border-radius: 0 !important;
   background-color: #282828;
-  color: #7b7b7b;
+  color: #a8a8a8;
 }
 
 .modal .modal-content .modal-body {
@@ -639,7 +639,7 @@ body.scale-effect .btn-holder .btn-play {
 #home .menu a {
   margin-left: 30px;
   margin-right: 30px;
-  color: #7b7b7b;
+  color: #a8a8a8;
   display: block;
   font-size: 12px;
   font-weight: 700;
@@ -817,7 +817,7 @@ body.scale-effect .btn-holder .btn-play {
   display: block;
   width: 100%;
   font-weight: 900;
-  color: #7b7b7b;
+  color: #a8a8a8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
 
@@ -828,7 +828,7 @@ body.scale-effect .btn-holder .btn-play {
   margin-top: -10px;
   margin-bottom: 30px;
   font-size: 1.2em;
-  color: #7b7b7b;
+  color: #a8a8a8;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
 
@@ -840,7 +840,7 @@ body.scale-effect .btn-holder .btn-play {
 #v-card-holder #v-card .infos .profile-list .title {
   display: block;
   float: left;
-  color: #7b7b7b;
+  color: #a8a8a8;
   line-height: 26px;
 }
 
@@ -858,7 +858,7 @@ body.scale-effect .btn-holder .btn-play {
   font-size: 15px;
   font-weight: 400;
   line-height: 20px;
-  color: #7b7b7b;
+  color: #a8a8a8;
 }
 
 #v-card-holder #v-card .links {
