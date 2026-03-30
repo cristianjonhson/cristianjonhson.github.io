@@ -81,6 +81,14 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+
+  #home .header-background,
+  .single-background {
+    background-attachment: scroll;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -1556,14 +1564,6 @@ footer {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-}
-
-@media (max-width: 768px) {
-
-  #home .header-background,
-  .single-background {
-    background-attachment: scroll;
-  }
 }
 
 .single-page {
