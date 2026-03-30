@@ -1222,6 +1222,18 @@ body.scale-effect .btn-holder .btn-play {
   text-align: left;
 }
 
+/* Materialize oculta bullets por defecto; los recuperamos en listas de contenido. */
+.timeline-block .card-content ul,
+#skills .card .card-content ul {
+  list-style-type: disc;
+  padding-left: 22px;
+}
+
+.timeline-block .card-content ul li,
+#skills .card .card-content ul li {
+  list-style-type: inherit;
+}
+
 .timeline-block .card-content .modal-dot {
   outline: 0;
   font-size: 20px;
