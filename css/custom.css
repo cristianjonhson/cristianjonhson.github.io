@@ -15,6 +15,23 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+:root {
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --hero-card-overlap: -156px;
+  --hero-card-top-shift: -18px;
+  --footer-overlap: -18px;
+}
+
+.mt-lg {
+  margin-top: var(--space-3);
+}
+
+.mb-md {
+  margin-bottom: var(--space-2);
+}
+
 .section {
   position: relative;
   padding-top: 15px;
@@ -800,7 +817,7 @@ body.scale-effect .btn-holder .btn-play {
   overflow: visible;
   width: 100%;
   height: auto;
-  margin-top: -156px;
+  margin-top: var(--hero-card-overlap);
 }
 
 #v-card-holder #v-card {
@@ -812,7 +829,7 @@ body.scale-effect .btn-holder .btn-play {
   transition: height 1s, color 1s, margin 1s;
   z-index: 1;
   background: #262525;
-  margin: -18px 3px 0 0;
+  margin: var(--hero-card-top-shift) 3px 0 0;
 }
 
 #v-card-holder #v-card .info-headings {
@@ -1504,7 +1521,7 @@ footer {
   width: 100%;
   height: auto;
   color: #282828;
-  margin-top: -18px;
+  margin-top: var(--footer-overlap);
   margin-bottom: 9px;
 }
 
