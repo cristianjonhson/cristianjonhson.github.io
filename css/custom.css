@@ -1011,6 +1011,16 @@ body.scale-effect .btn-holder .btn-play {
   #v-card-holder #v-card .info-headings {
     max-width: 270px;
   }
+
+  #v-card-holder #v-card .hero-cta {
+    max-width: 325px;
+    flex-direction: column;
+  }
+
+  #v-card-holder #v-card .hero-cta-btn {
+    width: 100%;
+    min-width: auto;
+  }
 }
 
 #v-card-holder #v-card #profile {
