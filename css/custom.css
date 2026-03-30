@@ -1239,6 +1239,48 @@ body.scale-effect .btn-holder .btn-play {
   margin-bottom: 8px !important;
 }
 
+/* Details/Summary — items colapsables de experiencia */
+.timeline-detail {
+  margin-top: var(--space-1);
+}
+
+.timeline-detail-toggle {
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 0;
+  user-select: none;
+}
+
+.timeline-detail-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.timeline-detail-toggle::before {
+  content: '▶';
+  font-size: 0.6rem;
+  transition: transform 0.2s;
+}
+
+.timeline-detail[open] .timeline-detail-toggle::before {
+  transform: rotate(90deg);
+}
+
+.timeline-detail[open] .timeline-detail-toggle {
+  color: var(--color-primary-focus);
+}
+
+.timeline-detail ul {
+  margin-top: var(--space-1);
+}
+
 .timeline-block {
   position: relative;
 }
