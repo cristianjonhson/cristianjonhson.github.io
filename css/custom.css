@@ -862,6 +862,31 @@ body.scale-effect .btn-holder .btn-play {
   margin: var(--hero-card-top-shift) 3px 0 0;
 }
 
+@media (max-width: 600px) {
+  :root {
+    --hero-card-overlap: -80px;
+    --hero-card-top-shift: -8px;
+  }
+
+  #v-card-holder #v-card {
+    height: auto;
+    min-height: 0;
+  }
+
+  #home .header-background {
+    height: 240px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .hero-cta-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 #v-card-holder #v-card .info-headings {
   max-width: 514px;
 }
