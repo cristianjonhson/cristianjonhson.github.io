@@ -110,12 +110,18 @@ a:focus {
 }
 
 a:focus-visible,
+.btn-floating:focus-visible,
 .btn:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible,
 .social-icon:focus-visible,
 #v-card-holder #v-card .links .social:focus-visible {
-  outline: 2px solid #06A763;
-  outline-offset: 3px;
-  box-shadow: 0 0 0 3px rgba(6, 167, 99, 0.25);
+  outline: 2px solid #06A763 !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 3px rgba(6, 167, 99, 0.25) !important;
 }
 
 h1 {
@@ -813,7 +819,8 @@ body.scale-effect .btn-holder .btn-play {
   max-width: 514px;
 }
 
-#v-card-holder #v-card .info-headings h4 {
+#v-card-holder #v-card .info-headings h4,
+#v-card-holder #v-card .info-headings h2 {
   display: block;
   width: 100%;
   font-weight: 900;
@@ -821,7 +828,8 @@ body.scale-effect .btn-holder .btn-play {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.18);
 }
 
-#v-card-holder #v-card .info-headings h6 {
+#v-card-holder #v-card .info-headings h6,
+#v-card-holder #v-card .info-headings #profile-role {
   display: block;
   width: 100%;
   font-weight: 300;
@@ -1006,7 +1014,8 @@ body.scale-effect .btn-holder .btn-play {
     margin-top: 38px;
   }
 
-  #v-card-holder #v-card .info-headings h6 {
+  #v-card-holder #v-card .info-headings h6,
+  #v-card-holder #v-card .info-headings #profile-role {
     margin-bottom: 20px;
   }
 
@@ -1259,11 +1268,12 @@ body.scale-effect .btn-holder .btn-play {
   font-weight: normal;
 }
 
-.timeline-block .timeline-content .timeline-info h6 {
-  line-height: 12px;
+.timeline-block .timeline-content .timeline-info .timeline-meta {
+  line-height: 1.2;
+  margin: 0 0 4px;
 }
 
-.timeline-block .timeline-content .timeline-info h6 small {
+.timeline-block .timeline-content .timeline-info .timeline-meta small {
   color: inherit;
 }
 
@@ -1376,7 +1386,8 @@ body.scale-effect .btn-holder .btn-play {
   margin: 15px 0;
 }
 
-#skills .card .skills-title h6 {
+#skills .card .skills-title h6,
+#skills .card .skills-title h3 {
   color: #282828;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
