@@ -1017,11 +1017,13 @@ body.scale-effect .btn-holder .btn-play {
   position: absolute;
   right: 0;
   z-index: 1;
+  height: 100%;
 }
 
 #v-card-holder #v-card #profile img {
   width: 400px;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 #v-card-holder #v-card #profile .slant {
@@ -1029,7 +1031,7 @@ body.scale-effect .btn-holder .btn-play {
   z-index: 1;
   position: absolute;
   border-style: solid;
-  border-width: 400px 0 0 100px;
+  border-width: 600px 0 0 100px;
   border-color: rgba(223, 50, 50, 0) transparent transparent var(--color-bg-dark);
 }
 
