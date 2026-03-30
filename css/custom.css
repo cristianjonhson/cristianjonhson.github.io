@@ -866,6 +866,28 @@ body.scale-effect .btn-holder .btn-play {
   max-width: 514px;
 }
 
+/* CTA en hero card */
+.hero-cta {
+  margin-top: var(--space-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  padding: 8px 18px;
+  border-radius: 3px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.hero-cta-btn:hover {
+  transform: translateY(-1px);
+}
+
 #v-card-holder #v-card .info-headings h4,
 #v-card-holder #v-card .info-headings h2 {
   display: block;
