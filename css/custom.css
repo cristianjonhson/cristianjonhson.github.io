@@ -853,8 +853,9 @@ body.scale-effect .btn-holder .btn-play {
 #v-card-holder #v-card {
   position: relative;
   width: 100%;
-  height: 400px;
-  overflow: hidden;
+  min-height: 400px;
+  height: auto;
+  overflow: visible;
   -webkit-transition: height 1s, color 1s, margin 1s;
   transition: height 1s, color 1s, margin 1s;
   z-index: 1;
