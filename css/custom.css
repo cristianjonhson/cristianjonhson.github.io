@@ -2038,6 +2038,14 @@ footer {
   background-attachment: fixed;
 }
 
+@media (max-width: 768px) {
+
+  #home .header-background,
+  .single-background {
+    background-attachment: scroll;
+  }
+}
+
 .single-page {
   margin-top: -320px;
 }
