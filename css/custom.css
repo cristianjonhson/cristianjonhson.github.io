@@ -1977,9 +1977,12 @@ body.scale-effect .btn-holder .btn-play {
 }
 
 #scrollup {
+  appearance: none;
+  -webkit-appearance: none;
   color: #282828;
   height: 45px;
   width: 45px;
+  padding: 0;
   cursor: pointer;
   font-size: 28px;
   background: #06A763;

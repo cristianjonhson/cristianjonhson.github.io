@@ -22,13 +22,13 @@
   function initScrollToTop() {
     $(window).on("scroll", function () {
       if ($(this).scrollTop() >= 50) {
-        $("div#scrollup").addClass("animated flipInY").fadeIn(200);
+        $("#scrollup").addClass("animated flipInY").fadeIn(200);
       } else {
-        $("div#scrollup").fadeOut(200);
+        $("#scrollup").fadeOut(200);
       }
     });
 
-    $("div#scrollup").on("click", function () {
+    $("#scrollup").on("click", function () {
       $("html,body").animate({ scrollTop: 0 }, 600);
       return false;
     });
