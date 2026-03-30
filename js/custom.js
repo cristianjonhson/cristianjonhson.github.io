@@ -40,9 +40,7 @@
   });
 
   jQuery(window).on("load", function () {
-    setTimeout(function () {
-      $("div#loading").fadeOut(500);
-    }, 2000);
+    $("div#loading").fadeOut(500);
 
     if (typeof ScrollReveal === "function") {
       window.sr = ScrollReveal({ reset: false });
