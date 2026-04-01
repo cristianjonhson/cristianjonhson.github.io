@@ -85,6 +85,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/custom.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) { }
+    })();
+  </script>
 </head>
 
 <body>
@@ -824,6 +833,10 @@
       </div>
     </div>
   </section>
+  <div id="theme-toggle-wrap">
+    <button id="theme-toggle" type="button" aria-label="Cambiar a modo claro" title="Modo claro"><i class="fa fa-sun-o"
+        aria-hidden="true"></i></button>
+  </div>
   <div id="scroll-top">
     <button id="scrollup" type="button" aria-label="Volver al inicio" title="Volver al inicio"><i
         class="fa fa-angle-up"></i></button>

@@ -5,6 +5,32 @@
     return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
+  function initThemeToggle() {
+    var html = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+
+    function applyTheme(t) {
+      html.setAttribute('data-theme', t);
+      var isLight = t === 'light';
+      btn.setAttribute('aria-label', isLight ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro');
+      btn.setAttribute('title', isLight ? 'Modo oscuro' : 'Modo claro');
+      btn.innerHTML = isLight
+        ? '<i class="fa fa-moon-o" aria-hidden="true"></i>'
+        : '<i class="fa fa-sun-o" aria-hidden="true"></i>';
+    }
+
+    btn.addEventListener('click', function () {
+      var next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+
+    // Sincroniza el ícono con el tema ya aplicado por el script anti-FOUC del head
+    var current = html.getAttribute('data-theme') || 'dark';
+    applyTheme(current);
+  }
+
   function initSmoothScroll() {
     $("div#about-btn")
       .find('a[href*=#]:not([href=#])')
@@ -54,6 +80,7 @@
   }
 
   jQuery(document).on("ready", function () {
+    initThemeToggle();
     initSmoothScroll();
     initScrollToTop();
   });

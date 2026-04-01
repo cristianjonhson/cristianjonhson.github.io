@@ -13,6 +13,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-overflow-scrolling: touch;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -49,6 +50,7 @@ body {
   --color-bg-card: #282828;
   --color-text-light: #a8a8a8;
   --color-text-body: #a0a0a0;
+  --color-divider: rgba(255, 255, 255, 0.08);
 
   /* Tipografía */
   --fs-base: 15px;
@@ -67,6 +69,15 @@ body {
   --hero-card-overlap: -156px;
   --hero-card-top-shift: -18px;
   --footer-overlap: -18px;
+}
+
+/* ── Modo claro ─────────────────────────────────────── */
+html[data-theme="light"] {
+  --color-bg-dark: #f2f2f2;
+  --color-bg-card: #ffffff;
+  --color-text-light: #1a1a1a;
+  --color-text-body: #3a3a3a;
+  --color-divider: rgba(0, 0, 0, 0.10);
 }
 
 .mt-lg {
@@ -250,8 +261,8 @@ video {
 .card {
   position: relative;
   background-color: var(--color-bg-card);
-  transition: box-shadow .25s;
-  -webkit-transition: box-shadow .25s;
+  transition: box-shadow 0.25s, background-color 0.25s ease;
+  -webkit-transition: box-shadow 0.25s, background-color 0.25s ease;
   border-radius: 0 !important;
   margin: 8px 0;
 }
@@ -922,7 +933,7 @@ body.scale-effect .btn-holder .btn-play {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-1);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--color-divider);
 }
 
 .hero-cta-btn {
@@ -1643,6 +1654,39 @@ body.scale-effect .btn-holder .btn-play {
   visibility: visible;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+/* ── Botón de toggle de tema ────────────────────────── */
+#theme-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  color: var(--color-bg-card);
+  height: 45px;
+  width: 45px;
+  padding: 0;
+  cursor: pointer;
+  font-size: 20px;
+  background: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  text-align: center;
+  position: fixed;
+  bottom: 21px;
+  left: 18px;
+  z-index: 5;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: background 0.2s ease, transform 0.15s ease, color 0.25s ease;
+}
+
+#theme-toggle:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+#theme-toggle:focus-visible {
+  outline: 2px solid var(--color-primary) !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 3px var(--color-primary-alpha) !important;
 }
 
 footer {
