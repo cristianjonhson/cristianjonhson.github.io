@@ -29,18 +29,17 @@
 
   function initScrollToTop() {
     $(window).on("scroll", function () {
-      if ($(this).scrollTop() >= 50) {
-        if (prefersReducedMotion()) {
-          $("#scrollup").show();
-        } else {
-          $("#scrollup").addClass("animated flipInY").fadeIn(200);
-        }
+      var shouldShow = $(this).scrollTop() >= 50;
+      var scrollUpButton = $("#scrollup");
+
+      scrollUpButton.toggleClass("is-visible", shouldShow);
+
+      if (prefersReducedMotion()) {
+        scrollUpButton.removeClass("animated flipInY");
+      } else if (shouldShow) {
+        scrollUpButton.addClass("animated flipInY");
       } else {
-        if (prefersReducedMotion()) {
-          $("#scrollup").hide();
-        } else {
-          $("#scrollup").fadeOut(200);
-        }
+        scrollUpButton.removeClass("animated flipInY");
       }
     });
 
