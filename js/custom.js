@@ -1,6 +1,10 @@
 (function ($) {
   "use strict";
 
+  function prefersReducedMotion() {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
   function initSmoothScroll() {
     $("div#about-btn")
       .find('a[href*=#]:not([href=#])')
@@ -12,7 +16,11 @@
           var target = $(this.hash);
           target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
           if (target.length) {
-            $("html,body").animate({ scrollTop: target.offset().top }, 900, "swing");
+            if (prefersReducedMotion()) {
+              $("html,body").scrollTop(target.offset().top);
+            } else {
+              $("html,body").animate({ scrollTop: target.offset().top }, 900, "swing");
+            }
             return false;
           }
         }
@@ -22,14 +30,26 @@
   function initScrollToTop() {
     $(window).on("scroll", function () {
       if ($(this).scrollTop() >= 50) {
-        $("#scrollup").addClass("animated flipInY").fadeIn(200);
+        if (prefersReducedMotion()) {
+          $("#scrollup").show();
+        } else {
+          $("#scrollup").addClass("animated flipInY").fadeIn(200);
+        }
       } else {
-        $("#scrollup").fadeOut(200);
+        if (prefersReducedMotion()) {
+          $("#scrollup").hide();
+        } else {
+          $("#scrollup").fadeOut(200);
+        }
       }
     });
 
     $("#scrollup").on("click", function () {
-      $("html,body").animate({ scrollTop: 0 }, 600);
+      if (prefersReducedMotion()) {
+        $("html,body").scrollTop(0);
+      } else {
+        $("html,body").animate({ scrollTop: 0 }, 600);
+      }
       return false;
     });
   }
@@ -40,9 +60,13 @@
   });
 
   jQuery(window).on("load", function () {
-    $("div#loading").fadeOut(500);
+    if (prefersReducedMotion()) {
+      $("div#loading").hide();
+    } else {
+      $("div#loading").fadeOut(500);
+    }
 
-    if (typeof ScrollReveal === "function") {
+    if (!prefersReducedMotion() && typeof ScrollReveal === "function") {
       window.sr = ScrollReveal({ reset: false });
 
       var commonCards = ".timeline-dot,.timeline-content,#skills-card,.section-title img";
